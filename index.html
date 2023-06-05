@@ -102,7 +102,9 @@
 							is in beast beginning signs open god you're gathering whose gathered cattle let.
 							Creature whales fruit unto meat the life beginning all in under give two.
 						</p>
-						<a class="primary_btn" href="#"><span>Download CV</span></a>
+						<a class="primary_btn"
+							href="https://docs.google.com/document/d/1_kaw11p4kavftNa-XcaKexQhKK1KeWGR/edit?usp=sharing&ouid=113766262754516989864&rtpof=true&sd=true"><span>Download
+								CV</span></a>
 					</div>
 				</div>
 			</div>
@@ -442,7 +444,8 @@
 						<h2>client say about me</h2>
 						<p>Is give may shall likeness made yielding spirit a itself togeth created after sea is in beast
 							<br>
-							beginning signs open god you're gathering ithe</p>
+							beginning signs open god you're gathering ithe
+						</p>
 					</div>
 				</div>
 			</div>
@@ -617,6 +620,27 @@
 	<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCjCGmQ0Uq4exrzdcL6rvxywDDOvfAu6eE"></script>
 	<script src="js/gmaps.min.js"></script>
 	<script src="js/theme.js"></script>
+	<script>
+		const sections = document.querySelectorAll("section");
+		const navLi = document.querySelectorAll("nav .container ul li");
+		window.addEventListener("scroll", () => {
+			let current = "";
+			sections.forEach((section) => {
+				const sectionTop = section.offsetTop;
+				const sectionHeight = section.clientHeight;
+				if (pageYOffset >= sectionTop - sectionHeight / 3) {
+					current = section.getAttribute("id");
+				}
+			});
+
+			navLi.forEach((li) => {
+				li.classList.remove(".nav-item.active");
+				if (li.classList.contains(current)) {
+					li.classList.add(".nav-item.active");
+				}
+			});
+		});
+	</script>
 </body>
 
 </html>
